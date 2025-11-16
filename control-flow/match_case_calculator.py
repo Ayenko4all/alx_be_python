@@ -1,6 +1,7 @@
 num1 = int(input("Enter the first number: "))
 num2 = int(input("Enter the second number: "))
-operation = input("Enter the operation (+, -, *, /): ")
+operation = input("Choose the operation (+, -, *, /): ")
+
 match operation:
     case "+":
         result = num1 + num2
@@ -19,4 +20,3 @@ match operation:
             print("Cannot divide by zero.")
     case _:
         print("Invalid operation. Please enter one of +, -, *, /.")
-# This code is a simple calculator that performs basic arithmetic operations based on user input.
