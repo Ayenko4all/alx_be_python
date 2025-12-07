@@ -1,12 +1,14 @@
 shopping_list = []
 
-while True:
-    print("\nShopping List Manager")
+def display_menu():
+    print("Shopping List Manager")
     print("1. Add item")
     print("2. Remove item")
     print("3. View list")
     print("4. Exit")
 
+while True:
+    display_menu()
     choice = input("Choose an option (1-4): ")
 
     if choice == "1":
@@ -26,12 +28,10 @@ while True:
         if not shopping_list:
             print("Shopping list is empty.")
         else:
-            print("Current shopping list:")
             for item in shopping_list:
-                print(f"- {item}")
+                print(item)
 
     elif choice == "4":
-        print("Exiting Shopping List Manager.")
         break
 
     else:
