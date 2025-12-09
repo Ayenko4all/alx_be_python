@@ -19,7 +19,8 @@ class Library:
                 return True
         return False
 
-    def return_book(self, title):
+    def return_book(self):
+        title = input("Enter book title to return: ")
         for book in self._books:
             if book.title == title and book._is_checked_out:
                 book._is_checked_out = False
@@ -27,8 +28,4 @@ class Library:
         return False
 
     def list_available_books(self):
-        available_books = []
-        for book in self._books:
-            if not book._is_checked_out:
-                available_books.append(book.title)
-        return available_books
+        return [book.title for book in self._books if not book._is_checked_out]
